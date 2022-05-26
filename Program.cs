@@ -1,75 +1,83 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace exercicos
+namespace exercicios
 {
     class Program
     {
-        static void respostaLista(int lista, int exercicio)
-        {
-            if (lista == 1)
-            {
-                Lista1 lista1 = new Lista1();
-                switch (exercicio)
-                {
-                    case 1:
-                        lista1.exe1();
-                        break;
-                    case 2:
-                        lista1.exe2();
-                        break;
-                    case 3:
-                        lista1.exe3();
-                        break;
-                    case 4:
-                        lista1.exe4();
-                        break;
-                    case 5:
-                        lista1.exe5();
-                        break;
-                    case 6:
-                        lista1.exe6();
-                        break;
-                }
-            }
-            else if (lista == 2)
-            {
-                Lista2 lista2 = new Lista2();
-                switch (exercicio)
-                {
-                    case 1:
-                        lista2.exe1();
-                        break;
-                    case 2:
-                        lista2.exe2();
-                        break;
-                    case 3:
-                        lista2.exe3();
-                        break;
-                    case 4:
-                        lista2.exe4();
-                        break;
-                    case 5:
-                        // lista2.exe5();
-                        break;
-                    case 6:
-                        //lista2.exe6();
-                        break;
-                }
-            }
-        }
-        static void Main(string[] args)
+        static void Main()
         {
             int nLista, nExercicio;
             Console.Write("Insira o Número da Lista: ");
-            nLista = int.Parse(Console.ReadLine());
+            nLista = Entrada();
             Console.Write($"Lista {nLista}, insira o Número do exercicio: ");
-            nExercicio = int.Parse(Console.ReadLine());
-            respostaLista(nLista,nExercicio);
-
+            nExercicio = Entrada();
+            RespostaLista(nLista, nExercicio);
+        }
+        static void RespostaLista(int lista, int exercicio)
+        {
+            switch (lista)
+            {
+                case 1: ExeciciosLista1(exercicio); break;
+                case 2: ExeciciosLista2(exercicio); break;
+                default: Console.WriteLine("Lista não encontrada"); break;
+            }
+        }
+        private static void ExeciciosLista1(int exercicio)
+        {
+            switch (exercicio)
+            {
+                case 1: Lista1.Exe1(); break;
+                case 2: Lista1.Exe2(); break;
+                case 3: Lista1.Exe3(); break;
+                case 4: Lista1.Exe4(); break;
+                case 5: Lista1.Exe5(); break;
+                case 6: Lista1.Exe6(); break;
+                default: Console.WriteLine("Exercicio não encontrado"); break;
+            }
+        }
+        private static void ExeciciosLista2(int exercicio)
+        {
+            switch (exercicio)
+            {
+                case 1: Lista2.Exe1(); break;
+                case 2: Lista2.Exe2(); break;
+                case 3: Lista2.Exe3(); break;
+                case 4: Lista2.Exe4(); break;
+                case 5: /*lista2.exe5()*/; break;
+                case 6: /*lista2.exe6();*/ break;
+                default: Console.WriteLine("Exercicio não encontrado"); break;
+            }
+        }
+        private static int Entrada()
+        {
+            try
+            {
+                var entrada = Convert.ToInt16(Console.ReadLine());
+                ValidaEntrada(entrada);
+                return entrada;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Entrada inválida! Tente novamente");
+                Entrada();
+                return 0;
+            }
+        }
+        private static int ValidaEntrada(int entrada)
+        {
+            while (entrada <= 0)
+            {
+                try
+                {
+                    Console.WriteLine("Entrada inválida! Tente novamente");
+                    entrada = Convert.ToInt16(Console.ReadLine());
+                }
+                catch (Exception)
+                {
+                    entrada = 0;
+                }
+            }
+            return entrada;
         }
     }
 }
