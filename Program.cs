@@ -10,7 +10,7 @@ namespace exercicos
     {
         static void Main(string[] args)
         {
-            int opc = 6;
+            int opc = 6; // Coloque o número do exercicio que deseja ver a resposta!
             Lista1 lista1 = new Lista1();
             switch(opc){
                 case 1:
