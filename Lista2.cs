@@ -50,5 +50,32 @@ namespace exercicos
             }
 			//Dava pra fazer tudo em 1 for, porém achei mais legivel dividir em 2.
         }
+		public void exe4()
+        {
+            string[] vetorNome = new string[5];
+			string nome;
+            Console.WriteLine("Insira o nome das 5 Pessoas:");
+			for(int i = 0; i < vetorNome.Length; i++)
+            {
+                Console.Write($"Nome da {i+1} pessoa: ");
+                vetorNome[i] = Console.ReadLine();
+            }
+			Console.Write("Qual nome deseja Procurar: ");
+			nome = Console.ReadLine();
+			bool achou = false;
+			foreach(string achaNome in vetorNome)
+            {
+				if(achaNome == nome)
+                {
+					Console.WriteLine("ACHEI");
+					achou = true;
+                }
+            }
+			if(!achou)
+			{
+				Console.WriteLine("NÃO ACHEI");
+			}
+
+		}
 	}	
 }
