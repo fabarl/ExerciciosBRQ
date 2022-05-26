@@ -10,9 +10,10 @@ namespace exercicos
     {
         static void Main(string[] args)
         {
-            int opc = 6; // Coloque o número do exercicio que deseja ver a resposta!
+            int opcL1 = 0; // Coloque o número do exercicio que deseja ver a resposta, deixe 0 para não ver essa Lista!
             Lista1 lista1 = new Lista1();
-            switch(opc){
+            switch(opcL1)
+            {
                 case 1:
                     lista1.exe1();
                     break;
@@ -31,7 +32,32 @@ namespace exercicos
                 case 6:
                     lista1.exe6();
                     break;
-            }            
+            }
+// ------------------------------------- LISTA 2 ----------------------------------------------
+            int opcL2 = 1;  // Coloque o número do exercicio que deseja ver a resposta, deixe 0 para não ver essa Lista!
+            Lista2 lista2 = new Lista2();
+            switch (opcL2)
+            {
+                case 1:
+                    lista2.exe1();
+                    break;
+                case 2:
+                    //lista2.exe2();
+                    break;
+                case 3:
+                    //lista2.exe3();
+                    break;
+                case 4:
+                    //lista2.exe4();
+                    break;
+                case 5:
+                   // lista2.exe5();
+                    break;
+                case 6:
+                    //lista2.exe6();
+                    break;
+            }
+
         }
     }
 }
