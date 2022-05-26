@@ -34,7 +34,7 @@ namespace exercicos
                     break;
             }
 // ------------------------------------- LISTA 2 ----------------------------------------------
-            int opcL2 = 1;  // Coloque o número do exercicio que deseja ver a resposta, deixe 0 para não ver essa Lista!
+            int opcL2 = 2;  // Coloque o número do exercicio que deseja ver a resposta, deixe 0 para não ver essa Lista!
             Lista2 lista2 = new Lista2();
             switch (opcL2)
             {
@@ -42,7 +42,7 @@ namespace exercicos
                     lista2.exe1();
                     break;
                 case 2:
-                    //lista2.exe2();
+                    lista2.exe2();
                     break;
                 case 3:
                     //lista2.exe3();

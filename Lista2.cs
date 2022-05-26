@@ -16,9 +16,16 @@ namespace exercicos
 		}
 		public void exe2()
         {
-			//2 - Dado um vetor V:
-			//Crie um algoritmo que gere um vetor V2 a partir do dobro de cada valor de V.Gere os resultados no console.
-
-		}
+            //2 - Dado um vetor V:
+            //Crie um algoritmo que gere um vetor V2 a partir do dobro de cada valor de V.Gere os resultados no console.
+            int[] v = { 5, 1, 4, 2, 7, 8, 3, 6 };
+			int[] v2 = new int[v.Length];
+            Console.WriteLine("Resultado:");
+			for (int i = 0; i < v.Length; i++)
+            {
+				v2[i] = v[i] * 2;
+				Console.WriteLine($"Vetor1[{i}] = {v[i]} | Vetor2[{i}] = {v2[i]}");
+            }
+   		}
 	}	
 }
