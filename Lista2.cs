@@ -27,5 +27,28 @@ namespace exercicos
 				Console.WriteLine($"Vetor1[{i}] = {v[i]} | Vetor2[{i}] = {v2[i]}");
             }
    		}
+
+		public void exe3()
+        {
+			double[] vetorA = new double[10];
+			double x = 0;
+			double[] vetorM = new double[vetorA.Length];
+            Console.Write("Informe o valore multiplicador: ");
+			x = double.Parse(Console.ReadLine());
+            Console.WriteLine("------------");
+            Console.WriteLine("Informe os dados do Vetor A:");
+			for(int i = 0; i < vetorA.Length; i++)
+            {
+                Console.Write($"vetorA[{i}] = ");
+				vetorA[i] = double.Parse(Console.ReadLine());
+				vetorM[i] = vetorA[i] * x;
+            }
+			Console.WriteLine("------------");
+			for (int i = 0; i < vetorA.Length; i++)
+            {
+                Console.WriteLine($"VetorA[{vetorA[i]}] * {x} = VetorM[{vetorM[i]}]");
+            }
+			//Dava pra fazer tudo em 1 for, porém achei mais legivel dividir em 2.
+        }
 	}	
 }
