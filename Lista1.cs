@@ -10,9 +10,9 @@ namespace exercicos
             x = 15;
             y = 20;
             Console.WriteLine("Lista 1 - Exercicio 1");
-            Console.WriteLine(x);
+            Console.WriteLine("x = "+x);
             b = 3;
-            Console.WriteLine($"{x},{y}");
+            Console.WriteLine($" x = {x}, y = {y}");
         }
         public void exe2()
         {
@@ -21,10 +21,10 @@ namespace exercicos
             b = 3;
             c = a * b;
             Console.WriteLine("Lista 1 - Exercicio 2");
-            Console.WriteLine(c);
+            Console.WriteLine("c = "+c);
             b = 10;
             c = a - b;
-            Console.WriteLine($"{a},{b},{c}");
+            Console.WriteLine($"a = {a}, b = {b}, c = {c}");
 
         }
         public void exe3()
@@ -36,7 +36,7 @@ namespace exercicos
             y = z;
             x = y;
             Console.WriteLine("Lista 1 - Exercicio 3");
-            Console.WriteLine($"{x},{y},{z}");
+            Console.WriteLine($"x = {x}, y = {y}, z = {z}");
         }
         public void exe4()
         {
@@ -46,9 +46,9 @@ namespace exercicos
             a = b + 1;
             b = a + 1;
             Console.WriteLine("Lista 1 - Exercicio 4");
-            Console.WriteLine(a);
+            Console.WriteLine("a = "+a);
             a = b + 1;
-            Console.WriteLine($"{a},{b}");
+            Console.WriteLine($"a = {a}, b = {b}");
         }
         public void exe5()
         {
@@ -59,7 +59,7 @@ namespace exercicos
             x = 20;
             y = 10;
             Console.WriteLine("Lista 1 - Exercicio 5");
-            Console.WriteLine($"{x},{y},{z}");
+            Console.WriteLine($"x = {x}, y = {y}, z = {z}");
         }
         public void exe6()
         {
@@ -69,9 +69,9 @@ namespace exercicos
             a = a + b;
             c = a - b;
             Console.WriteLine("Lista 1 - Exercicio 6");
-            Console.WriteLine(c);
+            Console.WriteLine("c = "+c);
             b = 5;
-            Console.WriteLine($"{a},{b},{c}");
+            Console.WriteLine($"a = {a}, b = {b}, c = {c}");
         }
     }
 }

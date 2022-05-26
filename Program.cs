@@ -10,7 +10,7 @@ namespace exercicos
     {
         static void Main(string[] args)
         {
-            int opc = 0;
+            int opc = 6;
             Lista1 lista1 = new Lista1();
             switch(opc){
                 case 1:
