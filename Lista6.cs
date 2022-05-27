@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace exercicios
 {
-    class Lista2
+    class Lista6
     {
         public static void Exe1()
         {

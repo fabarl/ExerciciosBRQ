@@ -13,12 +13,12 @@ namespace exercicios
             nExercicio = Entrada();
             RespostaLista(nLista, nExercicio);
         }
-        static void RespostaLista(int lista, int exercicio)
+        private static void RespostaLista(int lista, int exercicio)
         {
             switch (lista)
             {
                 case 1: ExeciciosLista1(exercicio); break;
-                case 2: ExeciciosLista2(exercicio); break;
+                case 2: ExeciciosLista6(exercicio); break;
                 default: Console.WriteLine("Lista não encontrada"); break;
             }
         }
@@ -35,14 +35,14 @@ namespace exercicios
                 default: Console.WriteLine("Exercicio não encontrado"); break;
             }
         }
-        private static void ExeciciosLista2(int exercicio)
+        private static void ExeciciosLista6(int exercicio)
         {
             switch (exercicio)
             {
-                case 1: Lista2.Exe1(); break;
-                case 2: Lista2.Exe2(); break;
-                case 3: Lista2.Exe3(); break;
-                case 4: Lista2.Exe4(); break;
+                case 1: Lista6.Exe1(); break;
+                case 2: Lista6.Exe2(); break;
+                case 3: Lista6.Exe3(); break;
+                case 4: Lista6.Exe4(); break;
                 case 5: /*lista2.exe5()*/; break;
                 case 6: /*lista2.exe6();*/ break;
                 default: Console.WriteLine("Exercicio não encontrado"); break;
