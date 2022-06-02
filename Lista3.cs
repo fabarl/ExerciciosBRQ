@@ -14,14 +14,8 @@ namespace exercicios
             Console.Write("Coloque a nota 2: ");  nota2 = EntradaDoubleExe1();
             Console.Write("Coloque a nota 3: ");  nota3 = EntradaDoubleExe1();
             media = (nota1 + nota2 + nota3) / 3;
-            if (media >=6)
-            {
-                Console.WriteLine("Aprovado");
-            }
-            else
-            {
-                Console.WriteLine("Reprovado");
-            }
+            if (media >=6) Console.WriteLine("Aprovado");
+            else Console.WriteLine("Reprovado");
         }
         public static void Exe2() // Exercício 2
         {
@@ -39,14 +33,8 @@ namespace exercicios
             double vlr1, vlr2;
             Console.Write("Coloque o Valor 1: "); vlr1 = Double.Parse(Console.ReadLine());
             Console.Write("Coloque o Valor 2: "); vlr2 = Double.Parse(Console.ReadLine());
-            if (vlr1 % vlr2 == 0)
-            {
-                Console.Write("São multiplos!");
-            }
-            else
-            {
-                Console.WriteLine("Não são multiplos!");
-            }
+            if (vlr1 % vlr2 == 0) Console.Write("São multiplos!");
+            else Console.WriteLine("Não são multiplos!");
         }
         public static void Exe4() // Exercício 4
         {

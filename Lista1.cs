@@ -6,9 +6,7 @@ namespace exercicios
     {
         public static void Exe1()
         {
-#pragma warning disable CS0219 // A variável "b" é atribuída, mas seu valor nunca é usado
             int x, y, b;
-#pragma warning restore CS0219 // A variável "b" é atribuída, mas seu valor nunca é usado
             x = 15;
             y = 20;
             Console.WriteLine("Lista 1 - Exercicio 1");
