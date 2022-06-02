@@ -19,6 +19,7 @@ namespace exercicios
             {
                 case 1: ExeciciosLista1(exercicio); break;
                 case 3: ExeciciosLista3(exercicio); break;
+                case 4: ExeciciosLista4(exercicio); break;
                 case 6: ExeciciosLista6(exercicio); break;
                 default: Console.WriteLine("Lista não encontrada"); break;
             }
@@ -50,6 +51,21 @@ namespace exercicios
                 case 8: Lista3.Exe8(); break;
                 case 9: Lista3.Exe9(); break;
                 case 10: Lista3.Exe10(); break;
+                default: Console.WriteLine("Exercicio não encontrado"); break;
+            }
+        }
+        private static void ExeciciosLista4(int exercicio)
+        {
+            switch (exercicio)
+            {
+                case 1: Lista4.Exe1(); break;
+                case 2: Lista4.Exe2(); break;
+                case 3: Lista4.Exe3(); break;
+                case 4: Lista4.Exe4(); break;
+                case 5: Lista4.Exe5(); break;
+                case 6: Lista4.Exe6(); break;
+                case 7: Lista4.Exe7(); break;
+                case 8: Lista4.Exe8(); break;
                 default: Console.WriteLine("Exercicio não encontrado"); break;
             }
         }
