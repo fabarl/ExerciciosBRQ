@@ -41,11 +41,15 @@ namespace exercicios
             switch (exercicio)
             {
                 case 1: Lista3.Exe1(); break;
-                //case 2: Lista3.Exe2(); break;
-                //case 3: Lista3.Exe3(); break;
-               // case 4: Lista3.Exe4(); break;
-               // case 5: Lista3.Exe5(); break;
-                //case 6: Lista3.Exe6(); break;
+                case 2: Lista3.Exe2(); break;
+                case 3: Lista3.Exe3(); break;
+                case 4: Lista3.Exe4(); break;
+                case 5: Lista3.Exe5(); break;
+                case 6: Lista3.Exe6(); break;
+                case 7: Lista3.Exe7(); break;
+                case 8: Lista3.Exe8(); break;
+                case 9: Lista3.Exe9(); break;
+                case 10: Lista3.Exe10(); break;
                 default: Console.WriteLine("Exercicio não encontrado"); break;
             }
         }
