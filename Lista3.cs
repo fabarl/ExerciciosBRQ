@@ -118,7 +118,6 @@ namespace exercicios
                 return 0;
             }
         }
-
         private static double ValidaEntradaDoubleExe1(double entrada)
         {
             while (entrada < 0 || entrada > 10)
@@ -136,6 +135,7 @@ namespace exercicios
             return entrada;
         }
         //Fim validação exercicio 1
+        
         // Exercício 2
         private static string EntradaStringExe4()
         {
@@ -152,7 +152,6 @@ namespace exercicios
                 return EntradaStringExe4();
             }
         }
-
         private static string ValidaEntradaStringExe4(string entrada)
         {
             while (entrada != "M" || entrada != "H")
