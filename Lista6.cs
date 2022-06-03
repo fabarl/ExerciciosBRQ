@@ -64,7 +64,6 @@ namespace exercicios
             var existe = vetorNome.ToArray().Any(t => t.ToUpper() == nome.ToString().ToUpper());
             Console.WriteLine(existe ? "ACHEI" : "NÃO ACHEI");
         }
-
         private static double EntradaDouble()
         {
             try
@@ -92,7 +91,7 @@ namespace exercicios
                 }
                 catch (Exception)
                 {
-                    entrada = 0;
+                    entrada = 0; 
                 }
             }
             return entrada;
