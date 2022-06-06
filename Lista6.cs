@@ -5,7 +5,7 @@ namespace exercicios
 {
     class Lista6
     {
-        public static void Exe1()
+        public static void Exe1()// Exercício 1
         {
             // 1 - Criar um algoritmo que gere um vetor de 8 posições, onde os valores de cada posição seja o cubo de cada índice.
             double[] vetor = new double[8];
@@ -15,8 +15,7 @@ namespace exercicios
                 Console.WriteLine($" Vetor[{i}] = {vetor[i]}");
             }
         }
-
-        public static void Exe2()
+        public static void Exe2()// Exercício 2
         {
             //2 - Dado um vetor V:
             //Crie um algoritmo que gere um vetor V2 a partir do dobro de cada valor de V.Gere os resultados no console.
@@ -28,9 +27,8 @@ namespace exercicios
                 v2[i] = v[i] * 2;
                 Console.WriteLine($"Vetor1[{i}] = {v[i]} | Vetor2[{i}] = {v2[i]}");
             }
-        }
-
-        public static void Exe3()
+        } 
+        public static void Exe3()// Exercício 3
         {
             double[] vetorA = new double[10];
             double[] vetorM = new double[vetorA.Length];
@@ -47,9 +45,8 @@ namespace exercicios
                 vetorM[i] = vetorA[i] * x;
                 Console.WriteLine($"VetorA[{vetorA[i]}] * {x} = VetorM[{vetorM[i]}]");
             }
-        }
-
-        public static void Exe4()
+        } 
+        public static void Exe4()// Exercício 4
         {
             string[] vetorNome = new string[5];
             Console.WriteLine("Insira o nome das 5 Pessoas:");
@@ -63,8 +60,78 @@ namespace exercicios
 
             var existe = vetorNome.ToArray().Any(t => t.ToUpper() == nome.ToString().ToUpper());
             Console.WriteLine(existe ? "ACHEI" : "NÃO ACHEI");
+        } 
+        public static void Exe5()// Exercício 5
+        {
+            double[] q = new double[10];
+            double maior=0;
+            int pos=0;
+
+           for(int i = 0; i < q.Length; i++)
+            {
+                Console.Write($"Informe um valor par para a Posição {i}: "); q[i] = EntradaDoubleExe5();
+                if (maior < q[i])
+                {
+                    maior = q[i];
+                    pos = i;
+                }
+            }
+            Console.WriteLine($"O maior Valor é {maior} na Posição {pos}");
         }
-        private static double EntradaDouble()
+        public static void Exe6()// Exercicio 6
+        {
+            int[] temp = new int[7];
+            int tempSoma=0, mediaSemanal = 0, tempMaior = -99,tempMenor = 99, cont = 0;
+            Console.Clear();
+            Console.WriteLine("Entre com o valor da temperatura abaixo!");
+
+            for(int i = 0; i < 7; i++)
+            {
+                Console.Write($"Dia {i+1}:"); temp[i] = EntradaTemp();
+                if (tempMaior < temp[i]) tempMaior = temp[i];
+                if (tempMenor > temp[i]) tempMenor = temp[i];
+                tempSoma = tempSoma + (temp[i]);
+            }
+            mediaSemanal = tempSoma / temp.Length;
+            foreach(int temperatura in temp)
+            {
+                if (mediaSemanal < temperatura) cont++;
+            }
+            Console.WriteLine($"Menor temperatura da semana = {ConversorTemp(tempMenor)}");
+            Console.WriteLine($"Maior temperatura da semana = {ConversorTemp(tempMaior)}");
+            Console.WriteLine($"Temperatura média semanal = {ConversorTemp(mediaSemanal)}");
+            Console.WriteLine("Total de Dias com temperatura inferior a média semanal = " +cont);
+        }
+        public static void Exe7()// Exercicio 7
+        {
+            double[] vetor = new double[10];
+            double aux;
+            Console.Clear();
+            for(int i = 0; i < vetor.Length; i++)
+            {
+                Console.Write($"Posição[{i+1}] - Informe o Número: ");
+                vetor[i] = double.Parse(Console.ReadLine());
+             }
+            for (int i = 0; i < vetor.Length; i++)
+            {
+                for (int j = 0; j < vetor.Length; j++)
+                {
+                    if (vetor[i] < vetor[j])
+                    {
+                        aux = vetor[i];
+                        vetor[i] = vetor[j];
+                        vetor[j] = aux;
+                    }
+                }
+            }
+            for (int i = 0; i < vetor.Length; i++)
+            {
+                Console.WriteLine($"VetorOrdenado[{i+1}] = {vetor[i]}");
+            }
+        }
+
+        //-------------Funções para validações e verificações dos exercícios acima-------------
+        private static double EntradaDouble() //Verifica se a entrada Double é válida
         {
             try
             {
@@ -80,7 +147,7 @@ namespace exercicios
             }
         }
 
-        private static double ValidaEntradaDouble(double entrada)
+        private static double ValidaEntradaDouble(double entrada) // Gera condicional se o dado inserido está dentro do exigido
         {
             while (entrada <= 0)
             {
@@ -95,6 +162,53 @@ namespace exercicios
                 }
             }
             return entrada;
+        }
+
+        private static double EntradaDoubleExe5()// Valida entradas pares
+        {
+            var entrada = double.Parse(Console.ReadLine());
+            try
+            {
+                if(entrada < 0 || entrada %2 != 0)
+                {
+                    Console.Write("Entrada inválida! Digite Novamente: ");
+                    EntradaDoubleExe5();
+                }
+            }
+            catch
+            {
+                Console.Write("Entrada inválida! Digite Novamente: ");
+                EntradaDoubleExe5();
+            }
+            return entrada;
+        }
+
+        private static int EntradaTemp()
+        {
+            try
+            {
+                int entrada = int.Parse(Console.ReadLine());
+                return entrada;
+            }catch
+            {
+                Console.Write("[ERRO} insira um valor inteiro: ");
+                EntradaTemp();
+                return 0;
+            }
+        }
+
+        private static string ConversorTemp(int temp)
+        {
+
+            if (temp < 0)
+            {
+                temp = temp * -1;
+                return $"{temp} Negativo";
+            }
+
+            if (temp > 0)return $"{temp} Positivo";
+
+            return $"{temp}";
         }
     }
 }

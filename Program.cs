@@ -77,8 +77,12 @@ namespace exercicios
                 case 2: Lista6.Exe2(); break;
                 case 3: Lista6.Exe3(); break;
                 case 4: Lista6.Exe4(); break;
-                case 5: /*lista2.exe5()*/; break;
-                case 6: /*lista2.exe6();*/ break;
+                case 5: Lista6.Exe5(); break;
+                case 6: Lista6.Exe6(); break;
+                case 7: Lista6.Exe7(); break;
+                //case 8: Lista6.Exe8(); break;
+                //case 9: Lista6.Exe9(); break;
+                //case 10: Lista6.Exe10(); break;
                 default: Console.WriteLine("Exercicio não encontrado"); break;
             }
         }
