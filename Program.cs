@@ -80,9 +80,9 @@ namespace exercicios
                 case 5: Lista6.Exe5(); break;
                 case 6: Lista6.Exe6(); break;
                 case 7: Lista6.Exe7(); break;
-                //case 8: Lista6.Exe8(); break;
-                //case 9: Lista6.Exe9(); break;
-                //case 10: Lista6.Exe10(); break;
+                case 8: Lista6.Exe8(); break;
+                case 9: Lista6.Exe9(); break;
+                case 10: Lista6.Exe10(); break;
                 default: Console.WriteLine("Exercicio não encontrado"); break;
             }
         }

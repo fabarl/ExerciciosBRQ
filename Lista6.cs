@@ -129,6 +129,44 @@ namespace exercicios
                 Console.WriteLine($"VetorOrdenado[{i+1}] = {vetor[i]}");
             }
         }
+        public static void Exe8()// Exercicio 8
+        {
+            static double soma(double arg1, double arg2, double arg3)
+            {
+                return arg1 + arg2 + arg3;
+            }
+            static double media(double vlr)
+            {
+                return vlr / 3;
+            }
+            Console.Clear();
+            Console.WriteLine("Entre com os Números: ");
+            Console.Write("Primeiro número: "); var num1 = double.Parse(Console.ReadLine());
+            Console.Write("Segundo número: "); var num2 = double.Parse(Console.ReadLine());
+            Console.Write("Terceiro número: "); var num3 = double.Parse(Console.ReadLine());
+            Console.WriteLine($"A Soma dos valores é: {soma(num1, num2, num3)} e a Média é: {media(soma(num1, num2, num3))} "); 
+        }
+        public static void Exe9()// Exercício 9
+        {
+            Console.Clear();
+            static string exercicio9(double numero)
+            {
+                if (numero > 0) return "P";
+                else return "N";
+            }
+            Console.Write("Insira um número: "); var num = double.Parse(Console.ReadLine());
+            Console.WriteLine(exercicio9(num));
+        }
+        public static void Exe10()// Exercicio 10
+        {
+            static string exercicios10(int numero)
+            {
+                string dado = Convert.ToString(numero);
+                return Convert.ToString(dado.Length);
+            }
+            Console.Write("informe o Número: "); var num = int.Parse(Console.ReadLine());
+            Console.WriteLine($"Total de Digitos: {exercicios10(num)}");
+        }
 
         //-------------Funções para validações e verificações dos exercícios acima-------------
         private static double EntradaDouble() //Verifica se a entrada Double é válida
