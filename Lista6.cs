@@ -43,8 +43,9 @@ namespace exercicios
                 Console.Write($"vetorA[{i}] = ");
                 vetorA[i] = EntradaDouble();
                 vetorM[i] = vetorA[i] * x;
-                Console.WriteLine($"VetorA[{vetorA[i]}] * {x} = VetorM[{vetorM[i]}]");
             }
+            for (int i = 0; i < vetorA.Length;i++) 
+                Console.WriteLine($"VetorA[{vetorA[i]}] * {x} = VetorM[{vetorM[i]}]");
         } 
         public static void Exe4()// Exercício 4
         {
@@ -58,7 +59,7 @@ namespace exercicios
             Console.Write("Qual nome deseja Procurar: ");
             string nome = Console.ReadLine();
 
-            var existe = vetorNome.ToArray().Any(t => t.ToUpper() == nome.ToString().ToUpper());
+            var existe = vetorNome.Any(t => t.ToUpper() == nome.ToString().ToUpper());
             Console.WriteLine(existe ? "ACHEI" : "NÃO ACHEI");
         } 
         public static void Exe5()// Exercício 5
@@ -95,7 +96,7 @@ namespace exercicios
             mediaSemanal = tempSoma / temp.Length;
             foreach(int temperatura in temp)
             {
-                if (mediaSemanal < temperatura) cont++;
+                if (mediaSemanal > temperatura) cont++;
             }
             Console.WriteLine($"Menor temperatura da semana = {ConversorTemp(tempMenor)}");
             Console.WriteLine($"Maior temperatura da semana = {ConversorTemp(tempMaior)}");
@@ -135,16 +136,16 @@ namespace exercicios
             {
                 return arg1 + arg2 + arg3;
             }
-            static double media(double vlr)
+            static double media(double vlr1, double vlr2, double vlr3)
             {
-                return vlr / 3;
+                return soma(vlr1,vlr2,vlr3) / 3;
             }
             Console.Clear();
             Console.WriteLine("Entre com os Números: ");
             Console.Write("Primeiro número: "); var num1 = double.Parse(Console.ReadLine());
             Console.Write("Segundo número: "); var num2 = double.Parse(Console.ReadLine());
             Console.Write("Terceiro número: "); var num3 = double.Parse(Console.ReadLine());
-            Console.WriteLine($"A Soma dos valores é: {soma(num1, num2, num3)} e a Média é: {media(soma(num1, num2, num3))} "); 
+            Console.WriteLine($"A Soma dos valores é: {soma(num1, num2, num3)} e a Média é: {media(num1, num2, num3)} "); 
         }
         public static void Exe9()// Exercício 9
         {
